@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+        
+    </head>
+
+    <body>
+
+    
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span class="heading_second">Indian Premier League (IPL)</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        
+        
+
+            
+            
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <label for="">Batting Team</label>
+                    <br>
+                    <select class="form-input-1" name="batting-team">
+                        
+                        <option value="none">--- Select a Batting team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>
+                    <br>
+                    <!-- Bowling Team Dropdown -->
+                    <label for="">Bowling team</label>
+                        <br>
+                    <select class="form-input-1" name="bowling-team">
+                        <label for="">Bowling team</label>
+                        
+                        <option value="none">--- Select a Bowling team ---</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br><br>
+                    <label for="">Overs</label>
+                    <br>
+                    
+
+                    <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2"><br>
+                    <br>
+                    <label for="">Runs</label>
+                    <br>
+                    
+                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64"><br>
+                    <br>
+                    <label for="">wickets</label>
+                    <br>
+                    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"><br>
+                    
+                    <br>
+                    <label for="">runs in previous 5 overs</label>
+                    <br>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42"><br>
+                    <br>
+                    <label for="">Wickets</label>
+                    <br>
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"><br>
+                    <br>
+			<input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+
+            
+            
+             
+
+        
+       
+    
+    </body>
+</html>

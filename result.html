@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+        
+    </head>
+
+    <body>
+
+       
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>First Innings Score Predictor for </span><span class="heading_second">Indian Premier League (IPL)</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask</p>
+    		</div>
+    	</div>
+
+        
+        <div class="prediction-area">
+
+            
+			
+			<div class="results">
+				<h2 class='result-p'>The final predicted score (range): {{ lower_limit }} to {{ upper_limit }}</h2>
+			</div>
+
+
+            
+
+        
+      
+
+    </body>
+</html>
